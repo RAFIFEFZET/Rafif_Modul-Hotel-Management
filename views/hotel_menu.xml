@@ -1,0 +1,122 @@
+<odoo>
+    <!-- Action for Floor -->
+    <record id="action_hotel_floor" model="ir.actions.act_window">
+        <field name="name">Floor</field>
+        <field name="res_model">hotel.floor</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to add a new Floor.
+            </p>
+        </field>
+    </record>
+
+    <!-- Action for Amenity -->
+    <record id="action_hotel_amenity" model="ir.actions.act_window">
+        <field name="name">Amenity</field>
+        <field name="res_model">hotel.amenity</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to add a new Amenity.
+            </p>
+        </field>
+    </record>
+
+    <!-- Action for Services -->
+    <record id="action_hotel_services" model="ir.actions.act_window">
+        <field name="name">Services</field>
+        <field name="res_model">hotel.services</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to add a new Service.
+            </p>
+        </field>
+    </record>
+
+    <!-- Action for Room -->
+    <record id="action_hotel_room" model="ir.actions.act_window">
+        <field name="name">Room</field>
+        <field name="res_model">hotel.room</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to add a new Room.
+            </p>
+        </field>
+    </record>
+
+    <!-- Action for Reservation -->
+    <record id="action_hotel_reservation" model="ir.actions.act_window">
+        <field name="name">Reservation</field>
+        <field name="res_model">room.booking</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to add a new Reservation.
+            </p>
+        </field>
+    </record>
+
+    <!-- Root menu item -->
+    <menuitem 
+        id="menu_hotel_management_root" 
+        name="Hotel Management" 
+        sequence="100" 
+    />
+
+    <!-- Configuration menu item -->
+    <menuitem 
+        id="menu_hotel_configuration_root" 
+        name="Configuration" 
+        parent="menu_hotel_management_root" 
+        sequence="200" 
+    />
+
+    <!-- Floor menu item -->
+    <menuitem 
+        id="menu_hotel_floor" 
+        name="Floor" 
+        parent="menu_hotel_configuration_root" 
+        sequence="30" 
+        action="action_hotel_floor"
+    />
+
+    <!-- Amenity menu item -->
+    <menuitem 
+        id="menu_hotel_amenity" 
+        name="Amenity" 
+        parent="menu_hotel_configuration_root" 
+        sequence="20" 
+        action="action_hotel_amenity"
+    />
+
+    <!-- Services menu item -->
+    <menuitem 
+        id="menu_hotel_services" 
+        name="Services" 
+        parent="menu_hotel_configuration_root" 
+        sequence="40" 
+        action="action_hotel_services"
+    />
+
+    <!-- Room menu item -->
+    <menuitem 
+        id="menu_hotel_room" 
+        name="Room" 
+        parent="menu_hotel_configuration_root" 
+        sequence="50" 
+        action="action_hotel_room"
+    />
+
+    <!-- Reservation menu item -->
+    <menuitem 
+        id="menu_hotel_reservation" 
+        name="Reservation" 
+        parent="menu_hotel_management_root" 
+        sequence="60" 
+        action="action_hotel_reservation"
+    />
+
+</odoo>

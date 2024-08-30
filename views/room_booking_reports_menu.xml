@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Reporting Menu -->
+    <menuitem id="hotel_reporting_menu"
+              name="Reporting"
+              sequence="300"
+              parent="menu_hotel_management_root"/>
+
+    <!-- Room Booking Report Menu -->
+    <menuitem id="room_booking_detail_menu"
+              name="Room Booking"
+              action="room_booking_detail_action"
+              parent="hotel_reporting_menu"
+              sequence="310"/>
+</odoo>

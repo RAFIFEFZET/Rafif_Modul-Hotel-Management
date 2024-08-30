@@ -1,0 +1,29 @@
+<odoo>
+    <!-- Tree View -->
+    <record id="view_hotel_amenity_tree" model="ir.ui.view">
+        <field name="name">hotel.amenity.tree</field>
+        <field name="model">hotel.amenity</field>
+        <field name="arch" type="xml">
+            <tree string="Hotel Amenities">
+                <field name="name"/>
+                <field name="icon" widget="image" class="oe_avatar_small"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_hotel_amenity_form" model="ir.ui.view">
+        <field name="name">hotel.amenity.form</field>
+        <field name="model">hotel.amenity</field>
+        <field name="arch" type="xml">
+            <form string="Hotel Amenity">
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="icon" widget="image" class="oe_avatar oe_avatar_small"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>
